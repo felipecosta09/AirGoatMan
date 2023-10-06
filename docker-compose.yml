@@ -1,0 +1,16 @@
+version: '3'
+services:
+  frontend:
+    image: frontend_java:v1.0
+    networks:
+      - my-network
+    ports:
+      - "8080:80"
+
+  backend:
+    image: go_backend:v1.0 
+    networks:
+      - my-network
+
+networks:
+  my-network:
